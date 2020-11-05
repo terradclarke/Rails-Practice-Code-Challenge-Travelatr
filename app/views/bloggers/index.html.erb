@@ -1,0 +1,12 @@
+<h1> Traveltar Bloggers Index </h1>
+<p> Click on a name to view profile information </p>
+
+
+<% @bloggers.each do |blogger| %> 
+    <ol><%= link_to "#{blogger.name}", blogger_path(blogger) %></ol> 
+        <% end %> 
+
+        </br> 
+
+
+        <%= link_to "Create A New Blogger Profile", new_blogger_path %>

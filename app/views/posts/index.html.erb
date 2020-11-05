@@ -1,0 +1,11 @@
+<h1> Traveltar Posts Index </h1>
+<p> Click on a post to view more information </p>
+
+
+<% @posts.each do |post| %> 
+    <ol><%= link_to "#{post.title}", post_path(post) %></ol> 
+        <% end %> 
+
+        </br> 
+
+        <%= link_to "Create a New Post", new_post_path %> 

@@ -1,0 +1,17 @@
+<h1> Blogger Profile for <%= @blogger.name %> </h1> 
+
+<p> Posts: </p> 
+<% @blogger.posts.each do |post| %> 
+ <li><%= link_to post.title, post_path(@blogger.posts) %></li>
+<% end %> 
+
+
+<p> Total Likes: <%= @blogger.total_likes %></p> 
+
+<p> Featured Post: </p> 
+<% if @blogger.featured_post %> 
+ <li><%= link_to @blogger.featured_post.title, post_path(@blogger.featured_post) %></li>
+<% else %> 
+    <p> There are no posts registered for this blogger. </p> 
+<% end %> 
+

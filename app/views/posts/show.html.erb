@@ -1,0 +1,15 @@
+<h1> Show Page for <%= @post.title %> </h1> 
+
+
+<p> Author: <%= link_to @post.blogger.name %></p> 
+
+<p> Destination: <%= @post.destination.name %></p> 
+
+
+<%= link_to "Edit Post", edit_post_path(@post) %></p> 
+
+<p> Likes: <%= @post.likes %></p>
+
+<%= button_to "Like", post_path(@post), method: :patch %> 
+
+

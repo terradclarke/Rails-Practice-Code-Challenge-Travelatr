@@ -1,0 +1,9 @@
+<h1> Traveltar Destinations Index </h1>
+<p> Click on a destination to view more information </p>
+
+
+<% @destinations.each do |destination| %> 
+    <ol><%= link_to "#{destination.name}", destination_path(destination) %></ol> 
+        <% end %> 
+
+        </br> 

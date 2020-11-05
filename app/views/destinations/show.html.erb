@@ -1,0 +1,17 @@
+<h1> Destination Profile for <%= @destination.name %> </h1> 
+
+<p> 5 Most Recent Posts: </p> 
+<% @destination.five_most_recent_posts.each do |post| %> 
+ <li><%= link_to post.title, post_path(@destination.five_most_recent_posts) %></li>
+<% end %> 
+
+
+<p> Featured Post: </p> 
+<% if @destination.featured_post %> 
+ <li><%= link_to @destination.featured_post.title, post_path(@destination.featured_post) %></li>
+ <% else %> 
+    <p> There are no posts registered for this destination. </p> 
+<% end %> 
+
+<p> Average Age of Bloggers: <%= @destination.average_age_of_bloggers %></p> 
+
